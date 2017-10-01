@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\obj\Debug\netcoreapp2.0\csharp_assignment4.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\obj\Debug\netcoreapp2.0\csharp_assignment4.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\obj\Debug\netcoreapp2.0\csharp_assignment4.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\bin\Debug\netcoreapp2.0\csharp_assignment4.deps.json
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\bin\Debug\netcoreapp2.0\csharp_assignment4.runtimeconfig.json
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\bin\Debug\netcoreapp2.0\csharp_assignment4.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\bin\Debug\netcoreapp2.0\csharp_assignment4.dll
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\bin\Debug\netcoreapp2.0\csharp_assignment4.pdb
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\obj\Debug\netcoreapp2.0\csharp_assignment4.dll
+C:\Users\Administrator\Desktop\csharp_assignment4\assg4_code\obj\Debug\netcoreapp2.0\csharp_assignment4.pdb
