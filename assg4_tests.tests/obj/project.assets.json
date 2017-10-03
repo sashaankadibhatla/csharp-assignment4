@@ -1659,6 +1659,19 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "csharp_assignment4/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/csharp_assignment4.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/csharp_assignment4.dll": {}
+        }
       }
     }
   },
@@ -5604,12 +5617,18 @@
         "xunit.runner.visualstudio.2.2.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "csharp_assignment4/1.0.0": {
+      "type": "project",
+      "path": "../assg4_code/csharp_assignment4.csproj",
+      "msbuildProject": "../assg4_code/csharp_assignment4.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170628-02",
       "Microsoft.NETCore.App >= 2.0.0",
+      "csharp_assignment4 >= 1.0.0",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
     ]
@@ -5621,11 +5640,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_tests.tests\\assg4_tests.tests.csproj",
+      "projectUniqueName": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_tests.tests\\assg4_tests.tests.csproj",
       "projectName": "assg4_tests.tests",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_tests.tests\\assg4_tests.tests.csproj",
+      "projectPath": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_tests.tests\\assg4_tests.tests.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_tests.tests\\obj\\",
+      "outputPath": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_tests.tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5641,7 +5660,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\csharp_assignment4.csproj": {
+              "projectPath": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\csharp_assignment4.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

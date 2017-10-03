@@ -136,7 +136,7 @@ namespace product_details_fill{
             return pinfo;
         }
         public  List<Product_Info> ProductDelete(List<Product_Info>  pinfo){
-            pinfo.RemoveAll(item =>item.rate>100);
+            pinfo.RemoveAll(item =>item.rate>90);
             return pinfo;
         }
         public List<Product_Info> ProductDelete(List<Product_Info> pinfo,int start,int end){

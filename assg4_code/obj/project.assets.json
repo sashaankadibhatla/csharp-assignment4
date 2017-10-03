@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\csharp_assignment4.csproj",
+      "projectUniqueName": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\csharp_assignment4.csproj",
       "projectName": "csharp_assignment4",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\csharp_assignment4.csproj",
+      "projectPath": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\csharp_assignment4.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\obj\\",
+      "outputPath": "c:\\Users\\Administrator\\Desktop\\csharp_assignment4\\assg4_code\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
