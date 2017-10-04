@@ -138,5 +138,20 @@ namespace product{
             listProductInfo.RemoveRange(intStart,intEnd);
             return listProductInfo;
         }
+        public List<Product_Info> ProductDelete(List<Product_Info> listProductInfo, string strDelete)
+        {
+            while(true)
+            {
+                try
+                {
+                    listProductInfo.RemoveAll(p =>p.name==strDelete);
+                    return listProductInfo;
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

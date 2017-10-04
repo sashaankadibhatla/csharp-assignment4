@@ -37,6 +37,7 @@ namespace product
                                             Console.WriteLine("1.Delete at a particular index");
                                             Console.WriteLine("2.Delete items with certain inbuilt condition");
                                             Console.WriteLine("3.Delete item in particular range");
+                                            Console.WriteLine("4.Delete item with particular product name");
                                             int intSecondSwitch=int.Parse(Console.ReadLine());
                                             switch (intSecondSwitch)
                                             {
@@ -53,6 +54,10 @@ namespace product
                                                         Console.WriteLine("enter the end index");
                                                         int intEnd=int.Parse(Console.ReadLine());
                                                         objDisplay.DisplayAfterDeletion(intStart,intEnd);
+                                                        break;
+                                                case 4:Console.WriteLine("enter the product name to be deleted");
+                                                        string strDelete=Console.ReadLine();
+                                                        objDisplay.DisplayAfterDeletion(strDelete);
                                                         break;
                                                 default:Console.WriteLine("please enter correct input");
                                                         break;
