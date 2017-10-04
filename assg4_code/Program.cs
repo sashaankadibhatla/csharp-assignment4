@@ -6,8 +6,8 @@ namespace csharp_assignment4
     {
         static void Main(string[] args)
         {
-             string ch1=null;
-             Display obj=new Display();
+             string strContinue=null;
+             Display objDisplay=new Display();
             while(true){
                 Console.WriteLine("Choose the below options");
                 Console.WriteLine("1.Display the contents");
@@ -15,18 +15,18 @@ namespace csharp_assignment4
                 Console.WriteLine("3.Display the contents by searching by our own");
                 Console.WriteLine("4.Delete on your own choice and display the contents");
                 Console.WriteLine("5.Exit");
-                int choice=int.Parse(Console.ReadLine());
+                int intFirstSwitch=int.Parse(Console.ReadLine());
                
-                switch(choice){
+                switch(intFirstSwitch){
                     case 1: Console.WriteLine("---------------------------------------------------------");
-                            obj.DisplayAll();
+                            objDisplay.DisplayAll();
                             break;
                     case 2: Console.WriteLine("---------------------------------------------------------");
-                            obj.displaySortedProducts();
+                            objDisplay.displaySortedProducts();
                             break;
                     case 3: Console.WriteLine("---------------------------------------------------------");
-                            string str=Console.ReadLine();
-                            obj.DisplayFound(str);
+                            string strFind=Console.ReadLine();
+                            objDisplay.DisplayFound(strFind);
                             break;
                     case 4: do
                                         {
@@ -35,29 +35,29 @@ namespace csharp_assignment4
                                             Console.WriteLine("1.Delete at a particular index");
                                             Console.WriteLine("2.Delete items with certain inbuilt condition");
                                             Console.WriteLine("3.Delete item in particular range");
-                                            int choice1=int.Parse(Console.ReadLine());
-                                            switch (choice1)
+                                            int intSecondSwitch=int.Parse(Console.ReadLine());
+                                            switch (intSecondSwitch)
                                             {
                                                 case 1:
                                                         Console.WriteLine("enter the index where the element should be deleted");
-                                                        int num=int.Parse(Console.ReadLine());
-                                                        obj.DisplayAfterDeletion(num);
+                                                        int intIndex=int.Parse(Console.ReadLine());
+                                                        objDisplay.DisplayAfterDeletion(intIndex);
                                                         break;
                                                 case 2:Console.WriteLine("delete the products having rate>100");
-                                                        obj.DisplayAfterDeletion();
+                                                        objDisplay.DisplayAfterDeletion();
                                                         break;
                                                 case 3: Console.WriteLine("enter the start and end index in the range to delete");
-                                                        int start=int.Parse(Console.ReadLine());
-                                                        int end=int.Parse(Console.ReadLine());
-                                                        obj.DisplayAfterDeletion(start,end);
+                                                        int intStart=int.Parse(Console.ReadLine());
+                                                        int intEnd=int.Parse(Console.ReadLine());
+                                                        objDisplay.DisplayAfterDeletion(intStart,intEnd);
                                                         break;
                                                 default:Console.WriteLine("please enter correct input");
                                                         break;
                                             }
                                         Console.WriteLine("do you want to still delete yes/no");
-                                         ch1=Console.ReadLine();
+                                         strContinue=Console.ReadLine();
 
-                                        }while(ch1.ToUpper()=="YES");
+                                        }while(strContinue.ToUpper()=="YES");
                                         break;
                     case 5: Environment.Exit(0);
                             break;

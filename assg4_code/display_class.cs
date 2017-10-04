@@ -13,15 +13,15 @@ namespace display
         {
             try
             {
-                ProductDetailsFill obj = new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
 
-                List<Product_Group> pGroup = obj.ProductGroupFill();
-                List<Product_Info> pInfo = obj.ProductFill();
-                IEnumerable<Product_Info> p = obj.ProductSort(pInfo);
+                List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
+                IEnumerable<Product_Info> listProductInfoEnumerable = objProductDetailsFill.ProductSort(listProductInfo);
 
-                foreach (Product_Group item1 in pGroup)
+                foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in p)
+                    foreach (Product_Info item2 in listProductInfoEnumerable)
                     {
                         if(item1.id == item2.groupid)
                         {
@@ -38,14 +38,14 @@ namespace display
         {
             try
             {
-                ProductDetailsFill obj = new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
 
-                List<Product_Group> pGroup = obj.ProductGroupFill();
-                List<Product_Info> pInfo = obj.ProductFill();
+                List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
 
-                foreach(Product_Group item1 in pGroup)
+                foreach(Product_Group item1 in listProductGroup)
                 {
-                    foreach(Product_Info item2 in pInfo)
+                    foreach(Product_Info item2 in listProductInfo)
                     {
                         if(item1.id == item2.groupid)
                         {   
@@ -58,24 +58,24 @@ namespace display
             }       
         }
 
-        public void DisplayFound(string str)
+        public void DisplayFound(string strFound)
         {
-            if(str == null)
+            if(strFound == null)
                 Console.WriteLine("Please enter a string!");
             else    
             {
                 try
                 {
-                    ProductDetailsFill obj = new ProductDetailsFill();
+                    ProductDetailsFill objProductDetailsFill  = new ProductDetailsFill();
 
-                    List<Product_Group> pGroup = obj.ProductGroupFill();
-                    List<Product_Info> pInfo = obj.ProductFill();
+                    List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                    List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
 
-                    var res = pInfo.Where(p => p.name.ToUpper().Contains(str.ToUpper()));
+                    var resultFound = listProductInfo.Where(p => p.name.ToUpper().Contains(strFound.ToUpper()));
 
-                        foreach (Product_Group item1 in pGroup)
+                        foreach (Product_Group item1 in listProductGroup)
                         {
-                            foreach (Product_Info item2 in res)
+                            foreach (Product_Info item2 in resultFound)
                             {
                                 if (item1.id == item2.groupid)
                                 {
@@ -91,20 +91,20 @@ namespace display
                         
         }
 
-        public void DisplayAfterDeletion(int num)
+        public void DisplayAfterDeletion(int intIndex)
         {
             try
             {
-                ProductDetailsFill obj = new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
 
-                List<Product_Group> pGroup = obj.ProductGroupFill();
-                List<Product_Info> pInfo = obj.ProductFill();
+                List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
 
-                List<Product_Info> pNew = obj.ProductDelete(pInfo,num);
+                List<Product_Info> listProductInfoAfterDelete = objProductDetailsFill.ProductDelete(listProductInfo,intIndex);
 
-                foreach (Product_Group item1 in pGroup)
+                foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in pInfo)
+                    foreach (Product_Info item2 in listProductInfo)
                     {
                         if (item1.id == item2.groupid)
                         {
@@ -121,16 +121,16 @@ namespace display
         {
             try
             {
-                ProductDetailsFill obj = new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
 
-                List<Product_Group> pGroup = obj.ProductGroupFill();
-                List<Product_Info> pInfo = obj.ProductFill();
+                List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
 
-                List<Product_Info> pNew = obj.ProductDelete(pInfo);
+                List<Product_Info> listProductInfoAfterDelete = objProductDetailsFill.ProductDelete(listProductInfo);
 
-                foreach (Product_Group item1 in pGroup)
+                foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in pInfo)
+                    foreach (Product_Info item2 in listProductInfo)
                     {
                         if (item1.id == item2.groupid)
                         {
@@ -143,20 +143,20 @@ namespace display
             }    
         }
 
-        public void DisplayAfterDeletion(int start, int end)
+        public void DisplayAfterDeletion(int intStartIndex, int intEndIndex)
         {
             try
             {
-                ProductDetailsFill obj = new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
 
-                List<Product_Group> pGroup = obj.ProductGroupFill();
-                List<Product_Info> pInfo = obj.ProductFill();
+                List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
 
-                List<Product_Info> pNew = obj.ProductDelete(pInfo, start, end);
+                List<Product_Info> listProductInfoAfterDelete = objProductDetailsFill.ProductDelete(listProductInfo, intStartIndex, intEndIndex);
 
-                foreach (Product_Group item1 in pGroup)
+                foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in pInfo)
+                    foreach (Product_Info item2 in listProductInfo)
                     {
                         if (item1.id == item2.groupid)
                         {

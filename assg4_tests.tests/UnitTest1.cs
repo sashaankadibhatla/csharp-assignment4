@@ -14,24 +14,24 @@ namespace assg4_tests.tests
         public void Test1()
         {
             //Arrange
-            Product_Info obj1=new Product_Info();
-            Product_Info obj2=new Product_Info();
-            Product_Info obj3=new Product_Info();
-            ProductDetailsFill mainobj=new ProductDetailsFill();
-            List<Product_Info> pg1=new List<Product_Info>(3);
-            List<Product_Info> pg2=new List<Product_Info>();
-            pg1.Add(obj1);
-            pg1.Add(obj2);
-            pg1.Add(obj3);
+            Product_Info objProductInfo1=new Product_Info();
+            Product_Info objProductInfo2=new Product_Info();
+            Product_Info objProductInfo3=new Product_Info();
+            ProductDetailsFill objProductDetailsFill=new ProductDetailsFill();
+            List<Product_Info> listProductInfo=new List<Product_Info>(3);
+            List<Product_Info> listProductInfoAfterDelete=new List<Product_Info>();
+            listProductInfo.Add(objProductInfo1);
+            listProductInfo.Add(objProductInfo2);
+            listProductInfo.Add(objProductInfo3);
             //Act
-            int cnt=pg1.Count;
-            pg2=mainobj.ProductDelete(pg1,1);
-            int cnt1=pg2.Count;
+            int intCountListProductInfo=listProductInfo.Count;
+            listProductInfoAfterDelete=objProductDetailsFill.ProductDelete(listProductInfo,1);
+            int intCountListProductInfoAfterDelete=listProductInfoAfterDelete.Count;
             //Assert
-            Assert.IsType<int>(cnt);
-            Assert.IsType<int>(cnt1);
-            Assert.Equal(cnt1+1,cnt);
-            Assert.NotEqual(cnt1,cnt);
+            Assert.IsType<int>(intCountListProductInfo);
+            Assert.IsType<int>(intCountListProductInfoAfterDelete);
+            Assert.Equal(intCountListProductInfoAfterDelete+1,intCountListProductInfo);
+            Assert.NotEqual(intCountListProductInfoAfterDelete,intCountListProductInfo);
         }
     }
 }
