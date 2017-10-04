@@ -42,6 +42,7 @@ namespace product
                                             switch (intSecondSwitch)
                                             {
                                                 case 1:
+                                                        objDisplay.DisplayProduct();
                                                         Console.WriteLine("enter the index where the element should be deleted");
                                                         int intIndex=int.Parse(Console.ReadLine());
                                                         objDisplay.DisplayAfterDeletion(intIndex);
@@ -49,13 +50,15 @@ namespace product
                                                 case 2:Console.WriteLine("delete the products having rate>90");
                                                         objDisplay.DisplayAfterDeletion();
                                                         break;
-                                                case 3: Console.WriteLine("enter the start index");
+                                                case 3: objDisplay.DisplayProduct();
+                                                        Console.WriteLine("enter the start index");
                                                         int intStart=int.Parse(Console.ReadLine());
                                                         Console.WriteLine("enter the end index");
                                                         int intEnd=int.Parse(Console.ReadLine());
                                                         objDisplay.DisplayAfterDeletion(intStart,intEnd);
                                                         break;
-                                                case 4:Console.WriteLine("enter the product name to be deleted");
+                                                case 4: objDisplay.DisplayProduct();
+                                                        Console.WriteLine("enter the product name to be deleted");
                                                         string strDelete=Console.ReadLine();
                                                         objDisplay.DisplayAfterDeletion(strDelete);
                                                         break;

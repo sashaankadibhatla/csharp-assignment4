@@ -57,6 +57,31 @@ namespace product
                 Console.WriteLine(ex.Message);
             }       
         }
+        public void DisplayProduct(){
+            {
+            try
+            {
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
+
+                List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
+
+                foreach(Product_Group item1 in listProductGroup)
+                {
+                    foreach(Product_Info item2 in listProductInfo)
+                    {
+                        if(item1.id == item2.groupid)
+                        {
+                            int intIndex=listProductInfo.IndexOf(item2);   
+                            Console.WriteLine("Index:"+intIndex+" Productname: "+item2.name);  
+                        }
+                    }
+                }
+            }catch(Exception ex){
+                Console.WriteLine(ex.Message);
+            }       
+        }
+        }
 
         public void DisplayFound(string strFound)
         {
