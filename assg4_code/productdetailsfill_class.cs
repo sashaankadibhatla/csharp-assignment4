@@ -144,7 +144,7 @@ namespace product{
             {
                 try
                 {
-                    listProductInfo.RemoveAll(p =>p.name==strDelete);
+                    listProductInfo.RemoveAll(p =>p.name.ToLower()==strDelete.ToLower());
                     return listProductInfo;
                 }
                 catch(Exception ex)

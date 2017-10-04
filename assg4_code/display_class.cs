@@ -206,7 +206,7 @@ namespace product
 
                 List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
                 List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
-                if(listProductInfo.Any(product=>product.name==strDelete)){
+                if(listProductInfo.Any(product=>product.name.ToLower()==strDelete.ToLower())){
                 List<Product_Info> listProductInfoAfterDelete = objProductDetailsFill.ProductDelete(listProductInfo,strDelete);
                 foreach (Product_Group item1 in listProductGroup)
                 {
