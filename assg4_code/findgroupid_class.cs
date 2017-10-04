@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using product_details_fill;
-using product_group;
 
 
-namespace groupid{
+namespace product{
 
     public class FindGroupId{
 
@@ -14,14 +12,8 @@ namespace groupid{
             List<Product_Group> listProductGroup=objProductDetailFill.ProductGroupFill();
 
             foreach(Product_Group item in listProductGroup){
-                if(item.name=="dairy"&&item.name==strFind)
-                    return 1;
-                if(item.name=="chocolate"&&item.name==strFind)
-                    return 2;
-                if(item.name=="juice"&&item.name==strFind)
-                    return 3;
-                if(item.name=="sweet"&&item.name==strFind)
-                    return 4;
+                if(strFind==item.name)
+                return item.id;
             }
             }
             catch(Exception ex){

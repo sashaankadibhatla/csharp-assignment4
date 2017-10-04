@@ -1,12 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using iproduct;
-using product_group;
-using product_info;
-using groupid;
-
-namespace product_details_fill{
+namespace product{
 
     public class ProductDetailsFill: Iproduct, IComparer<Product_Info>
     {

@@ -1,6 +1,5 @@
 ﻿using System;
-using display;
-namespace csharp_assignment4
+namespace product
 {
     class Program
     {
@@ -8,7 +7,9 @@ namespace csharp_assignment4
         {
              string strContinue=null;
              Display objDisplay=new Display();
-            while(true){
+            while(true)
+            {
+                try{
                 Console.WriteLine("Choose the below options");
                 Console.WriteLine("1.Display the contents");
                 Console.WriteLine("2.Sort the contents based on basis of Product Name");
@@ -25,6 +26,7 @@ namespace csharp_assignment4
                             objDisplay.displaySortedProducts();
                             break;
                     case 3: Console.WriteLine("---------------------------------------------------------");
+                            Console.WriteLine("enter the product to be searched");
                             string strFind=Console.ReadLine();
                             objDisplay.DisplayFound(strFind);
                             break;
@@ -43,25 +45,29 @@ namespace csharp_assignment4
                                                         int intIndex=int.Parse(Console.ReadLine());
                                                         objDisplay.DisplayAfterDeletion(intIndex);
                                                         break;
-                                                case 2:Console.WriteLine("delete the products having rate>100");
+                                                case 2:Console.WriteLine("delete the products having rate>90");
                                                         objDisplay.DisplayAfterDeletion();
                                                         break;
-                                                case 3: Console.WriteLine("enter the start and end index in the range to delete");
+                                                case 3: Console.WriteLine("enter the start index");
                                                         int intStart=int.Parse(Console.ReadLine());
+                                                        Console.WriteLine("enter the end index");
                                                         int intEnd=int.Parse(Console.ReadLine());
                                                         objDisplay.DisplayAfterDeletion(intStart,intEnd);
                                                         break;
                                                 default:Console.WriteLine("please enter correct input");
                                                         break;
                                             }
-                                        Console.WriteLine("do you want to still delete yes/no");
+                                        Console.WriteLine("do you want to still delete (enter yes to continue) any other inputs it doesnt continue");
                                          strContinue=Console.ReadLine();
-
                                         }while(strContinue.ToUpper()=="YES");
                                         break;
                     case 5: Environment.Exit(0);
                             break;
 
+                }
+                }catch(Exception ex)
+                {
+                        Console.WriteLine(ex.Message);
                 }
             }
         }

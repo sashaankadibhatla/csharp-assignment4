@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using product_group;
-using product_info;
 
 
-namespace iproduct{
+namespace product{
 
     public interface Iproduct{
         List<Product_Group> ProductGroupFill();

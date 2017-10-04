@@ -1,5 +1,5 @@
 using System;
-namespace  product_info{
+namespace  product{
 
     public class Product_Info{
 

@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using product_group;
-using product_info;
-using product_details_fill;
 
-namespace display
+namespace product
 {
     public class Display
     {
@@ -25,7 +22,9 @@ namespace display
                     {
                         if(item1.id == item2.groupid)
                         {
-                            Console.WriteLine("Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                            int intIndex=listProductInfo.IndexOf(item2);
+                            Console.WriteLine("Index:"+intIndex +"|| Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                            intIndex++;
                         }
                     }
                 }
@@ -48,8 +47,9 @@ namespace display
                     foreach(Product_Info item2 in listProductInfo)
                     {
                         if(item1.id == item2.groupid)
-                        {   
-                            Console.WriteLine("Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                        {
+                            int intIndex=listProductInfo.IndexOf(item2);   
+                            Console.WriteLine("Index:"+intIndex+"|| Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
                         }
                     }
                 }
@@ -79,7 +79,8 @@ namespace display
                             {
                                 if (item1.id == item2.groupid)
                                 {
-                                    Console.WriteLine("Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                                    int intIndex=listProductInfo.IndexOf(item2);
+                                    Console.WriteLine("Index:"+intIndex+"|| Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
                                 }
                             }   
                         }
@@ -108,7 +109,8 @@ namespace display
                     {
                         if (item1.id == item2.groupid)
                         {
-                            Console.WriteLine("Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                            int intIndex0=listProductInfoAfterDelete.IndexOf(item2);
+                            Console.WriteLine("Index:"+intIndex0+"||Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
                         }
                     }
                 }
@@ -134,7 +136,8 @@ namespace display
                     {
                         if (item1.id == item2.groupid)
                         {
-                            Console.WriteLine("Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                            int intIndex1=listProductInfoAfterDelete.IndexOf(item2);
+                            Console.WriteLine("Index:"+intIndex1+"||Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
                         }
                     }
                 }
@@ -158,9 +161,11 @@ namespace display
                 {
                     foreach (Product_Info item2 in listProductInfo)
                     {
+                        
                         if (item1.id == item2.groupid)
                         {
-                            Console.WriteLine("Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                            int intIndex2=listProductInfoAfterDelete.IndexOf(item2);
+                            Console.WriteLine("Index:"+intIndex2+"||Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
                         }
                     }
                 }
