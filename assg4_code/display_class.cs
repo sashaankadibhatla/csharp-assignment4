@@ -105,7 +105,7 @@ namespace product
 
                 foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in listProductInfo)
+                    foreach (Product_Info item2 in listProductInfoAfterDelete)
                     {
                         if (item1.id == item2.groupid)
                         {
@@ -132,7 +132,7 @@ namespace product
 
                 foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in listProductInfo)
+                    foreach (Product_Info item2 in listProductInfoAfterDelete)
                     {
                         if (item1.id == item2.groupid)
                         {
@@ -159,7 +159,7 @@ namespace product
 
                 foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in listProductInfo)
+                    foreach (Product_Info item2 in listProductInfoAfterDelete)
                     {
                         
                         if (item1.id == item2.groupid)
@@ -181,21 +181,21 @@ namespace product
 
                 List<Product_Group> listProductGroup = objProductDetailsFill.ProductGroupFill();
                 List<Product_Info> listProductInfo = objProductDetailsFill.ProductFill();
-
+                if(listProductInfo.Any(product=>product.name==strDelete)){
                 List<Product_Info> listProductInfoAfterDelete = objProductDetailsFill.ProductDelete(listProductInfo,strDelete);
-
                 foreach (Product_Group item1 in listProductGroup)
                 {
-                    foreach (Product_Info item2 in listProductInfo)
+                    foreach (Product_Info item2 in listProductInfoAfterDelete)
                     {
-                        
                         if (item1.id == item2.groupid)
                         {
-                            int intIndex2=listProductInfoAfterDelete.IndexOf(item2);
-                            Console.WriteLine("Index:"+intIndex2+"||Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
+                            int intIndex3=listProductInfoAfterDelete.IndexOf(item2);
+                            Console.WriteLine("Index:"+intIndex3+"||Product Group Name: "+item1.name+" || Product Name: "+item2.name+" || Product Description: "+item2.description+" || Product Rate: "+item2.rate);
                         }
                     }
                 }
+                }
+            else Console.WriteLine("product name does not exist so cant delete");
             }catch(Exception ex){
                 Console.WriteLine(ex.Message);
             }    
